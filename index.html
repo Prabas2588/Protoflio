@@ -1,15 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Prabas Talluri | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 80px;
     }
 
     body {
@@ -22,7 +28,8 @@
 
     header {
       height: 100vh;
-      background: url('https://images.unsplash.com/photo-1508780709619-79562169bc64') center/cover no-repeat;
+      background: linear-gradient(rgba(0,0,50,0.5), rgba(0,0,50,0.5)),
+                  url('https://images.unsplash.com/photo-1508780709619-79562169bc64') center/cover no-repeat;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -43,12 +50,14 @@
     }
 
     nav {
-      background: #000000aa;
+      background: #1e2a78;
       padding: 1rem;
       position: sticky;
       top: 0;
-      text-align: center;
       z-index: 1000;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
     }
 
     nav a {
@@ -56,6 +65,11 @@
       color: white;
       text-decoration: none;
       font-weight: 500;
+      padding: 0.3rem 0;
+    }
+
+    nav a:hover {
+      border-bottom: 2px solid #fff;
     }
 
     section {
@@ -67,7 +81,7 @@
     h2 {
       font-size: 2rem;
       margin-bottom: 1rem;
-      color: #2e3a59;
+      color: #1e2a78;
       text-align: center;
     }
 
@@ -81,24 +95,41 @@
       background: #f9f9f9;
       padding: 1.5rem;
       border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
     }
 
     ul {
       padding-left: 1.5rem;
     }
 
+    ul li {
+      margin-bottom: 0.8rem;
+    }
+
     footer {
       text-align: center;
       padding: 2rem;
-      background: #2e3a59;
+      background: #1e2a78;
       color: white;
     }
 
+    footer a {
+      color: #eee;
+      text-decoration: underline;
+    }
+
+    a.card-link {
+      text-decoration: none;
+      color: inherit;
+    }
+
     @media (max-width: 768px) {
-      body {
-        font-size: 15px;
-      }
       header h1 {
         font-size: 2.2rem;
       }
@@ -115,12 +146,13 @@
       .grid {
         grid-template-columns: 1fr;
       }
+
+      section {
+        padding: 3rem 1rem;
+      }
     }
 
     @media (max-width: 480px) {
-      body {
-        font-size: 14px;
-      }
       header h1 {
         font-size: 1.8rem;
       }
@@ -135,6 +167,10 @@
 
       h2 {
         font-size: 1.6rem;
+      }
+
+      section {
+        padding: 2.5rem 1rem;
       }
     }
   </style>
@@ -172,18 +208,22 @@
   <section id="projects">
     <h2>Projects</h2>
     <div class="grid">
-      <div class="card">
-        <h3>React.js Web App</h3>
-        <p>Developed a responsive dashboard and registration form with form validations using React.js, HTML, and JavaScript. Focused on clean design and efficient user interactions.</p>
-      </div>
+      <a class="card-link" href="https://github.com/prabas2588" target="_blank">
+        <div class="card">
+          <h3>React.js Web App</h3>
+          <p>Developed a responsive dashboard and registration form with form validations using React.js, HTML, and JavaScript. Focused on clean design and efficient user interactions.</p>
+        </div>
+      </a>
       <div class="card">
         <h3>3-to-8 Decoder using QCA</h3>
         <p>Created a nano-scale digital decoder layout using Quantum-dot Cellular Automata (QCA) with optimized energy, area, and cell count. Validated via simulation tools.</p>
       </div>
-      <div class="card">
-        <h3>Aptitude Test Webpage</h3>
-        <p>Designed a fully responsive aptitude test webpage with structured sections, time tracking, and question highlighting. <a href="https://prabas2588.github.io/aptitude/" target="_blank">View Project</a></p>
-      </div>
+      <a class="card-link" href="https://prabas2588.github.io/aptitude/" target="_blank">
+        <div class="card">
+          <h3>Aptitude Test Webpage</h3>
+          <p>Designed a fully responsive aptitude test webpage with structured sections, time tracking, and question highlighting. <strong>Click to View</strong></p>
+        </div>
+      </a>
     </div>
   </section>
 
@@ -215,8 +255,8 @@
 
   <section id="contact">
     <h2>Contact</h2>
-    <p>📞 +91 7997622588</p>
-    <p>📧 prabhastalluri2.0@gmail.com</p>
+    <p>📞 <a href="tel:+917997622588">+91 7997622588</a></p>
+    <p>📧 <a href="mailto:prabhastalluri2.0@gmail.com">prabhastalluri2.0@gmail.com</a></p>
     <p>📍 Hyderabad</p>
     <p>🔗 <a href="https://github.com/prabas2588" target="_blank">GitHub</a></p>
   </section>
