@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>My Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prabas Talluri | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
@@ -12,264 +13,204 @@
     }
 
     body {
-      font-family: 'Poppins', sans-serif;
-      background-color: #000;
-      color: #fff;
+      font-family: 'Montserrat', sans-serif;
+      background-color: #ffffff;
+      color: #333;
       line-height: 1.6;
     }
 
     header {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 50px;
-      background-color: #111;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-
-    .logo {
-      color: #E50914;
-      font-size: 24px;
-      font-weight: bold;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
-
-    nav ul li a {
-      color: white;
-      text-decoration: none;
-      font-weight: 500;
-      transition: color 0.3s;
-    }
-
-    nav ul li a:hover {
-      color: #E50914;
-    }
-
-    .hero {
-      min-height: 90vh;
+      height: 100vh;
+      background: url('https://images.unsplash.com/photo-1508780709619-79562169bc64') center/cover no-repeat;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      color: white;
       text-align: center;
-      padding: 20px;
+      padding: 2rem;
     }
 
-    .hero h1 {
+    header h1 {
       font-size: 3rem;
-      color: #E50914;
+      font-weight: 600;
     }
 
-    .hero p {
+    header p {
       font-size: 1.2rem;
-      margin-top: 15px;
+      margin-top: 0.5rem;
+    }
+
+    nav {
+      background: #000000aa;
+      padding: 1rem;
+      position: sticky;
+      top: 0;
+      text-align: center;
+      z-index: 1000;
+    }
+
+    nav a {
+      margin: 0 15px;
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
     }
 
     section {
-      padding: 50px 20px;
+      padding: 4rem 2rem;
+      max-width: 1000px;
+      margin: auto;
     }
 
     h2 {
-      color: #E50914;
-      margin-bottom: 20px;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #2e3a59;
+      text-align: center;
     }
 
-    .project-item {
-      background-color: #111;
-      padding: 20px;
-      margin-bottom: 20px;
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    .card {
+      background: #f9f9f9;
+      padding: 1.5rem;
       border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
     }
 
-    .text-block ul {
-      list-style-type: disc;
-      padding-left: 20px;
-    }
-
-    .text-block p, .text-block ul li {
-      font-size: 1rem;
-      margin-bottom: 10px;
-    }
-
-    .about .text-block {
-      margin-bottom: 20px;
+    ul {
+      padding-left: 1.5rem;
     }
 
     footer {
       text-align: center;
-      padding: 20px;
-      background-color: #111;
-      font-size: 14px;
-    }
-
-    a {
+      padding: 2rem;
+      background: #2e3a59;
       color: white;
-      word-break: break-word;
     }
 
-    a:hover {
-      color: #E50914;
+    @media (max-width: 992px) {
+      header h1 {
+        font-size: 2.5rem;
+      }
+
+      header p {
+        font-size: 1.1rem;
+      }
+
+      nav a {
+        margin: 0 10px;
+        font-size: 0.95rem;
+      }
     }
 
     @media (max-width: 768px) {
       header {
-        flex-direction: column;
-        padding: 20px;
-        text-align: center;
+        padding: 1rem;
       }
 
-      nav ul {
-        flex-direction: column;
-        gap: 10px;
-        margin-top: 15px;
+      header h1 {
+        font-size: 2rem;
       }
 
-      .hero h1 {
-        font-size: 2.5rem;
-      }
-
-      .hero p {
+      header p {
         font-size: 1rem;
       }
 
-      .project-item h3 {
-        font-size: 1.2rem;
+      nav a {
+        display: inline-block;
+        margin: 5px 10px;
+        font-size: 0.9rem;
+      }
+
+      section {
+        padding: 2rem 1rem;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
       }
     }
 
     @media (max-width: 480px) {
-      .hero h1 {
-        font-size: 2rem;
+      header h1 {
+        font-size: 1.8rem;
       }
 
-      .hero p, .text-block p, .text-block ul li {
+      header p {
         font-size: 0.9rem;
       }
 
-      nav ul li a {
-        font-size: 0.95rem;
+      nav a {
+        font-size: 0.85rem;
       }
 
-      footer {
-        font-size: 12px;
+      h2 {
+        font-size: 1.6rem;
       }
     }
   </style>
 </head>
 <body>
-
   <header>
-    <div class="logo">Welcome to My Portfolio</div>
-    <nav>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+    <h1>Prabas Talluri</h1>
+    <p>Electronics & Web Developer</p>
   </header>
 
-  <section id="home" class="hero">
-    <h1>Prabas Talluri</h1>
-    <p>Frontend Developer</p>
-    <p>I am eager to begin my career with a forward-thinking organization where I can apply my skills and knowledge to drive meaningful contributions. My goal is to continuously learn, adapt, and take on challenging responsibilities that align with my professional aspirations. I am committed to helping the organization grow while also developing my skills.</p>
-  </section>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-  <section id="projects" class="projects">
-    <h2>My Projects</h2>
-
-    <div class="project-item">
-      <h3>Website Development</h3>
-      <div class="text-block">
-        <p><strong>Ascus Tech</strong></p>
-        <ul>
-          <li>Designed and maintained the official website using WordPress.</li>
-          <li>Customized themes, built pages with Elementor, and ensured responsiveness.</li>
-          <li>Collaborated with teams and handled WordPress core updates.</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="project-item">
-      <h3>Aptitude Test Webpage Development</h3>
-      <div class="text-block">
-        <ul>
-          <li>Self-project using HTML, CSS, and JavaScript.</li>
-          <li>Responsive layout, structured content, timer, and clear UI/UX.</li>
-          <li>Optimized for mobile and ensured cross-browser compatibility.</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="project-item">
-      <h3>3-to-8 Decoder using QCA Technology</h3>
-      <div class="text-block">
-        <ul>
-          <li>Implemented using Quantum-dot Cellular Automata (QCA).</li>
-          <li>Focused on reducing cell count, area, and energy use.</li>
-          <li>Validated via simulations and analysis.</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="project-item">
-      <h3>React.js Webpage for Vcube</h3>
-      <div class="text-block">
-        <ul>
-          <li>Developed dashboard and registration form in React.js.</li>
-          <li>Included validations and state handling.</li>
-          <li>Demonstrated UI development and responsive practices.</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <section id="skills" class="about">
-    <h2>Technical Skills</h2>
-    <div class="text-block">
-      <p><strong>Languages & Frameworks:</strong> HTML5, CSS3, JavaScript, React.js, Bootstrap, WordPress, Java</p>
-      <p><strong>Tools:</strong> GIT, POSTMAN</p>
-      <p><strong>Productivity:</strong> MS Office, Word, Excel, PowerPoint</p>
-    </div>
-  </section>
-
-  <section id="about" class="about">
+  <section id="about">
     <h2>About Me</h2>
-    <div class="text-block">
-      <p>Hello! I'm Prabas Talluri, a passionate frontend developer based in India. I specialize in creating visually appealing and user-friendly websites with HTML, CSS, JavaScript, and React.js.</p>
-      <p>When I'm not coding, I enjoy exploring design trends, learning technologies, and sketching project ideas!</p>
-      <p>I am detail-oriented and always eager to solve problems, learn more, and deliver high-quality work that enhances user experience.</p>
+    <p>I am eager to begin my career with a forward-thinking organization where I can apply my skills and knowledge to drive meaningful contributions. I aim to continuously learn and take on challenging roles that align with my professional aspirations.</p>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>React.js Web App</h3>
+        <p>Developed a dashboard and registration form using React.js. Responsive and user-friendly with validations.</p>
+      </div>
+      <div class="card">
+        <h3>QCA Decoder</h3>
+        <p>Designed a 3-to-8 decoder using QCA technology. Optimized for area, cell count, and energy efficiency.</p>
+      </div>
+      <div class="card">
+        <h3>Aptitude Test Page</h3>
+        <p>Responsive webpage for online tests. <a href="https://prabas2588.github.io/aptitude/" target="_blank">View</a></p>
+      </div>
     </div>
   </section>
 
-  <section id="contact" class="contact">
+  <section id="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li>HTML5, CSS3, JavaScript, Java</li>
+      <li>React.js, Bootstrap, WordPress</li>
+      <li>Git, Postman, MS Office</li>
+    </ul>
+  </section>
+
+  <section id="contact">
     <h2>Contact</h2>
-    <p>Email: <a href="mailto:prabhastalluri2.0@gmail.com">prabhastalluri2.0@gmail.com</a></p>
-    <p>Phone: +91 79976 22588</p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/prabas-talluri-193204210/" target="_blank">linkedin.com/in/prabastalluri</a></p>
+    <p>📞 +91 7997622588</p>
+    <p>📧 prabhastalluri2.0@gmail.com</p>
+    <p>📍 Hyderabad</p>
+    <p>🔗 <a href="https://github.com/prabas2588" target="_blank">GitHub</a></p>
   </section>
 
   <footer>
-    <p>© 2025 My Portfolio | Designed by Prabas Talluri</p>
+    <p>&copy; 2025 Prabas Talluri | All Rights Reserved</p>
   </footer>
-
-  <script>
-    window.addEventListener('scroll', () => {
-      const header = document.querySelector('header');
-      header.classList.toggle('scrolled', window.scrollY > 0);
-    });
-  </script>
-
 </body>
 </html>
