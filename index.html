@@ -17,6 +17,7 @@
       background-color: #ffffff;
       color: #333;
       line-height: 1.6;
+      font-size: 16px;
     }
 
     header {
@@ -72,7 +73,7 @@
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 2rem;
     }
 
@@ -94,28 +95,12 @@
       color: white;
     }
 
-    @media (max-width: 992px) {
-      header h1 {
-        font-size: 2.5rem;
-      }
-
-      header p {
-        font-size: 1.1rem;
-      }
-
-      nav a {
-        margin: 0 10px;
-        font-size: 0.95rem;
-      }
-    }
-
     @media (max-width: 768px) {
-      header {
-        padding: 1rem;
+      body {
+        font-size: 15px;
       }
-
       header h1 {
-        font-size: 2rem;
+        font-size: 2.2rem;
       }
 
       header p {
@@ -123,13 +108,8 @@
       }
 
       nav a {
-        display: inline-block;
-        margin: 5px 10px;
+        margin: 0 10px;
         font-size: 0.9rem;
-      }
-
-      section {
-        padding: 2rem 1rem;
       }
 
       .grid {
@@ -138,6 +118,9 @@
     }
 
     @media (max-width: 480px) {
+      body {
+        font-size: 14px;
+      }
       header h1 {
         font-size: 1.8rem;
       }
@@ -164,14 +147,26 @@
 
   <nav>
     <a href="#about">About</a>
+    <a href="#education">Education</a>
     <a href="#projects">Projects</a>
     <a href="#skills">Skills</a>
+    <a href="#internships">Internships</a>
+    <a href="#certifications">Certifications</a>
     <a href="#contact">Contact</a>
   </nav>
 
   <section id="about">
     <h2>About Me</h2>
-    <p>I am eager to begin my career with a forward-thinking organization where I can apply my skills and knowledge to drive meaningful contributions. I aim to continuously learn and take on challenging roles that align with my professional aspirations.</p>
+    <p>I am eager to begin my career with a forward-thinking organization where I can apply my skills and knowledge to drive meaningful contributions. I aim to continuously learn and take on challenging roles that align with my professional aspirations. I am committed to helping the organization grow while developing my own professional capabilities in the process.</p>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <ul>
+      <li><strong>B.Tech in ECE</strong> – Aditya College of Engineering & Technology (2020-2024), 71.80%</li>
+      <li><strong>Intermediate MPC</strong> – Aditya Junior College (2018-2020), 9.36 CGPA</li>
+      <li><strong>SSC</strong> – Holi Angies EM High School (2017-2018), 9.0 CGPA</li>
+    </ul>
   </section>
 
   <section id="projects">
@@ -179,15 +174,15 @@
     <div class="grid">
       <div class="card">
         <h3>React.js Web App</h3>
-        <p>Developed a dashboard and registration form using React.js. Responsive and user-friendly with validations.</p>
+        <p>Developed a responsive dashboard and registration form with form validations using React.js, HTML, and JavaScript. Focused on clean design and efficient user interactions.</p>
       </div>
       <div class="card">
-        <h3>QCA Decoder</h3>
-        <p>Designed a 3-to-8 decoder using QCA technology. Optimized for area, cell count, and energy efficiency.</p>
+        <h3>3-to-8 Decoder using QCA</h3>
+        <p>Created a nano-scale digital decoder layout using Quantum-dot Cellular Automata (QCA) with optimized energy, area, and cell count. Validated via simulation tools.</p>
       </div>
       <div class="card">
-        <h3>Aptitude Test Page</h3>
-        <p>Responsive webpage for online tests. <a href="https://prabas2588.github.io/aptitude/" target="_blank">View</a></p>
+        <h3>Aptitude Test Webpage</h3>
+        <p>Designed a fully responsive aptitude test webpage with structured sections, time tracking, and question highlighting. <a href="https://prabas2588.github.io/aptitude/" target="_blank">View Project</a></p>
       </div>
     </div>
   </section>
@@ -195,9 +190,26 @@
   <section id="skills">
     <h2>Skills</h2>
     <ul>
-      <li>HTML5, CSS3, JavaScript, Java</li>
-      <li>React.js, Bootstrap, WordPress</li>
-      <li>Git, Postman, MS Office</li>
+      <li>Languages: HTML5, CSS3, JavaScript, Java</li>
+      <li>Frameworks & Tools: React.js, Bootstrap, WordPress, Git, Postman</li>
+      <li>Productivity: MS Office, Excel, PowerPoint</li>
+    </ul>
+  </section>
+
+  <section id="internships">
+    <h2>Internships</h2>
+    <ul>
+      <li><strong>VLSI – SkillDzire:</strong> Hands-on experience in digital circuit design using industry tools and concepts like combinational/sequential logic.</li>
+      <li><strong>Future Skills Expert – AP Government Schools:</strong> Taught AI, ML, coding, and robotics to 8th & 9th-grade students, encouraging interest in technology careers.</li>
+      <li><strong>Web Development Intern:</strong> Designed and maintained WordPress websites, customized pages using Elementor, ensured responsiveness and performance.</li>
+    </ul>
+  </section>
+
+  <section id="certifications">
+    <h2>Certifications</h2>
+    <ul>
+      <li>Python for Everybody – Coursera</li>
+      <li>Python for Data Science – NPTEL</li>
     </ul>
   </section>
 
