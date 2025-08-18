@@ -240,6 +240,33 @@
       </div>
     </section>
   </main>
+  <form action="https://api.web3forms.com/submit" method="POST" id="contactForm" style="max-width:400px;margin:2em auto 0;">
+  <input type="hidden" name="access_key" value="9cc9541c-b4e5-4e53-8187-5fe612a5fde9">
+  
+  <div style="margin-bottom:1em;">
+    <input type="text" name="name" placeholder="Your Name" required style="width:100%;padding:.7em;border-radius:8px;">
+  </div>
+  <div style="margin-bottom:1em;">
+    <input type="email" name="email" placeholder="Your Email" required style="width:100%;padding:.7em;border-radius:8px;">
+  </div>
+  <div style="margin-bottom:1em;">
+    <textarea name="message" rows="4" placeholder="Your Message" required style="width:100%;padding:.7em;border-radius:8px;"></textarea>
+  </div>
+  <button type="submit" style="background:#6d55e4;color:#fff;padding:0.7em 2.1em;border:none;border-radius:8px;font-weight:600;cursor:pointer;">Send Message</button>
+  <div id="formStatus" style="margin-top:1em;font-weight:500;"></div>
+</form>
+  <script>
+  // Show form feedback after submission
+  document.getElementById("contactForm").addEventListener("submit", function(e){
+    var status = document.getElementById("formStatus");
+    status.textContent = "Sending...";
+    setTimeout(function(){
+      status.textContent = "";
+    }, 3000); // Clear after 3 seconds
+  });
+</script>
+
+
 
   <footer>
     © 2025 Prabas Talluri | All Rights Reserved
@@ -258,3 +285,4 @@
   </script>
 </body>
 </html>
+
