@@ -4,96 +4,197 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Prabas Talluri | Portfolio</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
   <style>
-    * { margin:0; padding:0; box-sizing:border-box; }
-    html { scroll-behavior:smooth; scroll-padding-top:80px; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 80px;
+    }
     body {
-      font-family:'Montserrat', sans-serif;
-      background:linear-gradient(120deg, #e9f7ef 0%, #ede7f6 100%);
-      color:#30335a; line-height:1.6;
+      font-family: "Montserrat", sans-serif;
+      background: linear-gradient(120deg, #e9f7ef 0%, #ede7f6 100%);
+      color: #30335a;
+      line-height: 1.6;
     }
     header {
-      height:100vh;
-      background:linear-gradient(rgba(0,0,50,0.5), rgba(0,0,50,0.5)),
-        url('https://images.unsplash.com/photo-1508780709619-79562169bc64') center/cover no-repeat;
-      display:flex; flex-direction:column; justify-content:center; align-items:center;
-      color:white; text-align:center; padding:2rem;
+      height: 100vh;
+      background: linear-gradient(rgba(0, 0, 50, 0.5), rgba(0, 0, 50, 0.5)),
+        url("https://images.unsplash.com/photo-1508780709619-79562169bc64") center/cover no-repeat;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+      padding: 2rem;
     }
-    header h1 { font-size:3rem; font-weight:600; letter-spacing:1px; }
-    header p { font-size:1.2rem; margin-top:.5rem; }
+    header h1 {
+      font-size: 3rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+    header p {
+      font-size: 1.2rem;
+      margin-top: 0.5rem;
+    }
     nav {
-      background:#1e2a78; padding:1rem; position:sticky; top:0; z-index:1000;
-      display:flex; flex-wrap:wrap; justify-content:center;
+      background: #1e2a78;
+      padding: 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
     }
     nav a {
-      margin:0 15px; color:white; text-decoration:none; font-weight:500; padding:.3rem .8rem;
-      border-radius:20px; transition:.3s;
+      margin: 0 15px;
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      padding: 0.3rem 0.8rem;
+      border-radius: 20px;
+      transition: 0.3s;
     }
-    nav a:hover { background:#fff; color:#1e2a78; }
-    main { max-width:1100px; margin:auto; padding:2.5rem 1rem; }
-    section { margin-bottom:3rem; padding:2rem 1rem; border-radius:1.5rem;
-      background:linear-gradient(145deg, #ffffff, #f5f5ff); 
-      box-shadow: inset 0 3px 10px rgba(0,0,0,0.05);
+    nav a:hover {
+      background: #fff;
+      color: #1e2a78;
+    }
+    main {
+      max-width: 1100px;
+      margin: auto;
+      padding: 2.5rem 1rem;
+    }
+    section {
+      margin-bottom: 3rem;
+      padding: 2rem 1rem;
+      border-radius: 1.5rem;
+      background: linear-gradient(145deg, #ffffff, #f5f5ff);
+      box-shadow: inset 0 3px 10px rgba(0, 0, 0, 0.05);
     }
     section h2 {
-      color:#6d55e4; font-size:1.7rem; font-weight:700;
-      text-align:center; margin-bottom:1.5em; position:relative;
+      color: #6d55e4;
+      font-size: 1.7rem;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 1.5em;
+      position: relative;
     }
     section h2::after {
-      content:""; display:block; width:60px; height:4px;
-      background:#6d55e4; margin:10px auto 0; border-radius:10px;
+      content: "";
+      display: block;
+      width: 60px;
+      height: 4px;
+      background: #6d55e4;
+      margin: 10px auto 0;
+      border-radius: 10px;
     }
     .card-grid {
-      display:grid; gap:1.5rem;
-      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      display: grid;
+      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     }
     .card {
-      background:#fff; border-radius:1.2em;
-      padding:1.4em 1.1em; text-align:center;
-      transition: all .35s ease;
-      opacity:0; transform:translateY(40px);
+      background: #fff;
+      border-radius: 1.2em;
+      padding: 1.4em 1.1em;
+      text-align: center;
+      transition: all 0.35s ease;
+      opacity: 0;
+      transform: translateY(40px);
     }
     .card-icon {
-      font-size:2.4em; margin-bottom:.35em; color:#6d55e4; transition:.3s;
+      font-size: 2.4em;
+      margin-bottom: 0.35em;
+      color: #6d55e4;
+      transition: 0.3s;
     }
-    .card-title { font-weight:600; color:#512da8; margin-bottom:.4em; font-size:1.1em; }
-    .card-desc { color:#333; font-size:.95em; line-height:1.5; }
-    .card-extra { font-size:.9em; font-style:italic; color:#37909d; margin-top:.3em; }
+    .card-title {
+      font-weight: 600;
+      color: #512da8;
+      margin-bottom: 0.4em;
+      font-size: 1.1em;
+    }
+    .card-desc {
+      color: #333;
+      font-size: 0.95em;
+      line-height: 1.5;
+    }
+    .card-extra {
+      font-size: 0.9em;
+      font-style: italic;
+      color: #37909d;
+      margin-top: 0.3em;
+    }
     .card:hover {
-      transform:translateY(-14px) scale(1.06);
-      box-shadow:0 16px 32px rgba(109,85,228,0.25);
-      background:linear-gradient(180deg,#ffffff,#f9f6ff);
-      border:2px solid #d1c4e9;
+      transform: translateY(-14px) scale(1.06);
+      box-shadow: 0 16px 32px rgba(109, 85, 228, 0.25);
+      background: linear-gradient(180deg, #ffffff, #f9f6ff);
+      border: 2px solid #d1c4e9;
     }
     .card:hover .card-icon {
-      transform:scale(1.2) rotate(-5deg);
-      color:#4527a0;
-      text-shadow:0 0 12px rgba(109,85,228,0.5);
+      transform: scale(1.2) rotate(-5deg);
+      color: #4527a0;
+      text-shadow: 0 0 12px rgba(109, 85, 228, 0.5);
     }
-    .html:hover{box-shadow:0 16px 32px rgba(228,77,38,.35);}
-    .css:hover{box-shadow:0 16px 32px rgba(41,101,241,.35);}
-    .js:hover{box-shadow:0 16px 32px rgba(240,219,79,.4);}
-    .react:hover{box-shadow:0 16px 32px rgba(97,218,251,.4);}
-    .bootstrap:hover{box-shadow:0 16px 32px rgba(121,82,179,.4);}
-    .wp:hover{box-shadow:0 16px 32px rgba(33,117,155,.4);}
-    .java:hover{box-shadow:0 16px 32px rgba(233,143,47,.4);}
+    .html:hover {
+      box-shadow: 0 16px 32px rgba(228, 77, 38, 0.35);
+    }
+    .css:hover {
+      box-shadow: 0 16px 32px rgba(41, 101, 241, 0.35);
+    }
+    .js:hover {
+      box-shadow: 0 16px 32px rgba(240, 219, 79, 0.4);
+    }
+    .react:hover {
+      box-shadow: 0 16px 32px rgba(97, 218, 251, 0.4);
+    }
+    .bootstrap:hover {
+      box-shadow: 0 16px 32px rgba(121, 82, 179, 0.4);
+    }
+    .wp:hover {
+      box-shadow: 0 16px 32px rgba(33, 117, 155, 0.4);
+    }
+    .java:hover {
+      box-shadow: 0 16px 32px rgba(233, 143, 47, 0.4);
+    }
     @keyframes fadeUp {
-      from { opacity:0; transform:translateY(40px); }
-      to { opacity:1; transform:none; }
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: none;
+      }
     }
-    .card.show { animation:fadeUp 0.8s forwards; }
+    .card.show {
+      animation: fadeUp 0.8s forwards;
+    }
     footer {
-      text-align:center; padding:1.5rem; font-size:.95em;
-      background:#1e2a78; color:white;
-      border-top-right-radius:50px 30px; margin-top:3rem;
-      letter-spacing:.5px;
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 0.95em;
+      background: #1e2a78;
+      color: white;
+      border-top-right-radius: 50px 30px;
+      margin-top: 3rem;
+      letter-spacing: 0.5px;
     }
-    @media(max-width:768px){
-      .card-grid{grid-template-columns:1fr;}
-      header h1{font-size:2.2rem;}
+    @media (max-width: 768px) {
+      .card-grid {
+        grid-template-columns: 1fr;
+      }
+      header h1 {
+        font-size: 2.2rem;
+      }
     }
   </style>
 </head>
@@ -119,7 +220,7 @@
           <span class="card-icon"><i class="fas fa-user"></i></span>
           <div class="card-title">Career Objective</div>
           <div class="card-desc">
-            I am eager to begin my career with a forward-thinking organization where I can apply my skills 
+            I am eager to begin my career with a forward-thinking organization where I can apply my skills
             and knowledge to drive meaningful contributions while continuously learning and growing.
           </div>
         </div>
@@ -201,66 +302,97 @@
       <h2>Contact</h2>
       <div class="card-grid">
         <div class="card"><span class="card-icon"><i class="fas fa-envelope"></i></span><div class="card-title">Email</div><div class="card-desc"><a href="mailto:prabhastalluri2.0@gmail.com">prabhastalluri2.0@gmail.com</a></div></div>
-        <div class="card"><span class="card-icon"><i class="fas fa-phone"></i></span><div class="card-title">Phone</div><div class="card-desc">+91 7997622588</div></div>
+        <div class="card"><span class="fas fa-phone"></i></span><div class="card-title">Phone</div><div class="card-desc">+91 7997622588</div></div>
         <div class="card"><span class="card-icon"><i class="fas fa-map-marker-alt"></i></span><div class="card-title">Location</div><div class="card-desc">Hyderabad</div></div>
         <div class="card"><span class="card-icon"><i class="fab fa-github"></i></span><div class="card-title">GitHub</div><div class="card-desc"><a href="https://github.com/prabas2588" target="_blank">GitHub Profile</a></div></div>
       </div>
     </section>
     <h1 style="text-align: center;">Hey, Connect With Prabas!</h1>
-    <form action="https://api.web3forms.com/submit" method="POST" id="contactForm" style="max-width:400px;margin:2em auto 0; background: #f5f5ff; padding: 2em 1.5em; border-radius: 1.5rem; box-shadow: inset 0 3px 10px rgba(0, 0, 0, 0.05); font-family: 'Montserrat', sans-serif; color: #30335a;">
-      <input type="hidden" name="access_key" value="9cc9541c-b4e5-4e53-8187-5fe612a5fde9">
-      <input type="hidden" name="autoResponse" value="true">
-      <input type="hidden" name="autoResponseMessage" value="Thank you very much for contacting me, {{name}}!
-
-I appreciate your message and will review your inquiry as soon as possible.
-Feel free to explore my portfolio while you wait!">
-      <div style="margin-bottom:1em;">
-        <input type="text" name="name" placeholder="Your Name" required 
-          style="width:100%; padding:0.8em 1em; border:2px solid #d1c4e9; border-radius:12px; font-size:1rem; font-family:'Montserrat', sans-serif; color:#30335a; transition: border-color 0.3s ease;" 
-          onfocus="this.style.borderColor='#6d55e4'" onblur="this.style.borderColor='#d1c4e9'">
+    <form action="https://api.web3forms.com/submit" method="POST" id="contactForm" style="max-width:400px; margin:2em auto 0; background: #f5f5ff; padding: 2em 1.5em; border-radius: 1.5rem; box-shadow: inset 0 3px 10px rgba(0, 0, 0, 0.05); font-family: 'Montserrat', sans-serif; color: #30335a;">
+      <input type="hidden" name="access_key" value="9cc9541c-b4e5-4e53-8187-5fe612a5fde9" />
+      <input type="hidden" name="autoResponse" value="true" />
+      <input
+        type="hidden"
+        name="autoResponseMessage"
+        value="Thank you very much for contacting me, {{name}}! I appreciate your message and will review your inquiry as soon as possible. Feel free to explore my portfolio while you wait!"
+      />
+      <div style="margin-bottom: 1em;">
+        <input
+          type="text"
+          name="name"
+          placeholder="Your Name"
+          required
+          style="width: 100%; padding: 0.8em 1em; border: 2px solid #d1c4e9; border-radius: 12px; font-size: 1rem; font-family: 'Montserrat', sans-serif; color: #30335a; transition: border-color 0.3s ease;"
+          onfocus="this.style.borderColor='#6d55e4'"
+          onblur="this.style.borderColor='#d1c4e9'"
+        />
       </div>
-      <div style="margin-bottom:1em;">
-        <input type="email" name="email" placeholder="Your Email" required 
-          style="width:100%; padding:0.8em 1em; border:2px solid #d1c4e9; border-radius:12px; font-size:1rem; font-family:'Montserrat', sans-serif; color:#30335a; transition: border-color 0.3s ease;"  
-          onfocus="this.style.borderColor='#6d55e4'" onblur="this.style.borderColor='#d1c4e9'">
+      <div style="margin-bottom: 1em;">
+        <input
+          type="email"
+          name="email"
+          placeholder="Your Email"
+          required
+          style="width: 100%; padding: 0.8em 1em; border: 2px solid #d1c4e9; border-radius: 12px; font-size: 1rem; font-family: 'Montserrat', sans-serif; color: #30335a; transition: border-color 0.3s ease;"
+          onfocus="this.style.borderColor='#6d55e4'"
+          onblur="this.style.borderColor='#d1c4e9'"
+        />
       </div>
-      <div style="margin-bottom:1em;">
-        <input type="tel" name="phone" placeholder="Your Phone Number" pattern="[0-9+\-\s()]{7,15}" title="Please enter a valid phone number"
-          style="width:100%; padding:0.8em 1em; border:2px solid #d1c4e9; border-radius:12px; font-size:1rem; font-family:'Montserrat', sans-serif; color:#30335a; transition: border-color 0.3s ease;"  
-          onfocus="this.style.borderColor='#6d55e4'" onblur="this.style.borderColor='#d1c4e9'">
+      <div style="margin-bottom: 1em;">
+        <input
+          type="tel"
+          name="phone"
+          placeholder="Your Phone Number"
+          pattern="[0-9+\-\s()]{7,15}"
+          title="Please enter a valid phone number"
+          style="width: 100%; padding: 0.8em 1em; border: 2px solid #d1c4e9; border-radius: 12px; font-size: 1rem; font-family: 'Montserrat', sans-serif; color: #30335a; transition: border-color 0.3s ease;"
+          onfocus="this.style.borderColor='#6d55e4'"
+          onblur="this.style.borderColor='#d1c4e9'"
+        />
       </div>
-      <div style="margin-bottom:1em;">
-        <textarea name="message" rows="4" placeholder="Your Message" required
-          style="width:100%; padding:0.8em 1em; border:2px solid #d1c4e9; border-radius:12px; font-size:1rem; font-family:'Montserrat', sans-serif; color:#30335a; resize: vertical; transition: border-color 0.3s ease;"  
-          onfocus="this.style.borderColor='#6d55e4'" onblur="this.style.borderColor='#d1c4e9'"></textarea>
+      <div style="margin-bottom: 1em;">
+        <textarea
+          name="message"
+          rows="4"
+          placeholder="Your Message"
+          required
+          style="width: 100%; padding: 0.8em 1em; border: 2px solid #d1c4e9; border-radius: 12px; font-size: 1rem; font-family: 'Montserrat', sans-serif; color: #30335a; resize: vertical; transition: border-color 0.3s ease;"
+          onfocus="this.style.borderColor='#6d55e4'"
+          onblur="this.style.borderColor='#d1c4e9'"
+        ></textarea>
       </div>
-      <button type="submit" 
-        style="background: linear-gradient(120deg, #6d55e4 0%, #a18afb 100%);
-          color: white; font-weight: 700; border: none; border-radius: 14px; padding: 0.9em 2.2em; font-size: 1.1rem; cursor: pointer; transition: background 0.3s ease, box-shadow 0.3s ease; margin-top: 0.5em; width: 100%; box-shadow: 0 8px 20px rgba(109, 85, 228, 0.3);">
+      <button
+        type="submit"
+        style="background: linear-gradient(120deg, #6d55e4 0%, #a18afb 100%); color: white; font-weight: 700; border: none; border-radius: 14px; padding: 0.9em 2.2em; font-size: 1.1rem; cursor: pointer; transition: background 0.3s ease, box-shadow 0.3s ease; margin-top: 0.5em; width: 100%; box-shadow: 0 8px 20px rgba(109, 85, 228, 0.3);"
+      >
         Send Message
       </button>
       <div id="formStatus" style="margin-top: 1em; color: #6d55e4; font-weight: 600; font-size: 1rem; text-align: center;"></div>
     </form>
   </main>
-  <footer>
-    © 2025 Prabas Talluri | All Rights Reserved
-  </footer>
+  <footer>© 2025 Prabas Talluri | All Rights Reserved</footer>
+
   <script>
-    document.getElementById("contactForm").addEventListener("submit", function(e){
+    // Show form feedback after submission
+    document.getElementById("contactForm").addEventListener("submit", function (e) {
       var status = document.getElementById("formStatus");
       status.textContent = "Sending...";
-      setTimeout(function(){
+      setTimeout(function () {
         status.textContent = "";
-      }, 3000);
+      }, 3000); // Clear after 3 seconds
     });
-    const observer = new IntersectionObserver((entries)=>{
-      entries.forEach(entry=>{
-        if(entry.isIntersecting){
-          entry.target.classList.add('show');
-        }
-      });
-    },{threshold:0.2});
-    document.querySelectorAll('.card').forEach(c=>observer.observe(c));
+    // Animate cards on scroll
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+    document.querySelectorAll(".card").forEach((c) => observer.observe(c));
   </script>
 </body>
 </html>
