@@ -7,7 +7,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-
   <style>
     * { margin:0; padding:0; box-sizing:border-box; }
     html { scroll-behavior:smooth; scroll-padding-top:80px; }
@@ -210,6 +209,11 @@
     <h1 style="text-align: center;">Hey, Connect With Prabas!</h1>
     <form action="https://api.web3forms.com/submit" method="POST" id="contactForm" style="max-width:400px;margin:2em auto 0; background: #f5f5ff; padding: 2em 1.5em; border-radius: 1.5rem; box-shadow: inset 0 3px 10px rgba(0, 0, 0, 0.05); font-family: 'Montserrat', sans-serif; color: #30335a;">
       <input type="hidden" name="access_key" value="9cc9541c-b4e5-4e53-8187-5fe612a5fde9">
+      <input type="hidden" name="autoResponse" value="true">
+      <input type="hidden" name="autoResponseMessage" value="Thank you very much for contacting me, {{name}}!
+
+I appreciate your message and will review your inquiry as soon as possible.
+Feel free to explore my portfolio while you wait!">
       <div style="margin-bottom:1em;">
         <input type="text" name="name" placeholder="Your Name" required 
           style="width:100%; padding:0.8em 1em; border:2px solid #d1c4e9; border-radius:12px; font-size:1rem; font-family:'Montserrat', sans-serif; color:#30335a; transition: border-color 0.3s ease;" 
@@ -242,15 +246,13 @@
     © 2025 Prabas Talluri | All Rights Reserved
   </footer>
   <script>
-    // Show form feedback after submission
     document.getElementById("contactForm").addEventListener("submit", function(e){
       var status = document.getElementById("formStatus");
       status.textContent = "Sending...";
       setTimeout(function(){
         status.textContent = "";
-      }, 3000); // Clear after 3 seconds
+      }, 3000);
     });
-    // Animate cards on scroll
     const observer = new IntersectionObserver((entries)=>{
       entries.forEach(entry=>{
         if(entry.isIntersecting){
