@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://prabas2588.github.io/Protoflio/sitemap.xml
